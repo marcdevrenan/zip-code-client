@@ -12,6 +12,6 @@ public class AddressService {
 
     public Address getByZipCode(String cep) {
 
-        return client.target(REST_URI).path(cep).request(MediaType.APPLICATION_JSON).get(Address.class);
+        return client.target(REST_URI).path(cep).path("json").request(MediaType.APPLICATION_JSON).get(Address.class);
     }
 }
